@@ -6,6 +6,18 @@
 ------------------------------
 ## Tipos de variables
 
+tipo var
+```javascript
+var nombre = 'juan';
+```
+
+tipo let
+```javascript
+let nombre = 'juan';
+```
+tipo cons (Se asigna una vez pero no se puede volver a asignar:
+```javascript
+cons nombre = 'juan';
 ```
 
 
