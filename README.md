@@ -6,12 +6,12 @@
 ------------------------------
 ## Tipos de variables
 
-tipo var (Se puede asignar con '' o con "")
+tipo var (Se puede asignar con '' o con "") (es valida fuera del for)
 ```javascript
 var nombre = 'juan';
 ```
 
-tipo let (Se puede asignar con '' o con "")
+tipo let (Se puede asignar con '' o con "") (solo es valido en un fragmento de codigo, ejemplo dentro solo de un for)
 ```javascript
 let nombre = 'juan';
 ```
