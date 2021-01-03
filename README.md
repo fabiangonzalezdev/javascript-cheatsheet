@@ -4,6 +4,8 @@
 [Wiki Documentación Python](https://github.com/fabiansato/javascript-cheatsheet/wiki "Documentación  deJavascript")
 
 ------------------------------
+# Introducción a los conceptos básicos de JavaScript
+------------------------------
 ## Condiciones
 Javascript es case-sensitive
 Javascript es flexible, una variable puede ser int, luego string etc
@@ -31,7 +33,22 @@ tipo const (Se asigna una vez pero no se puede volver a asignar:
 ```javascript
 const nombre = 'juan';
 ```
+---------------------------------
+### Comentarios
 
+Hay 2 tipos de comentarios:
+```javascript
+// este es un comentario de una sola línea
+```
+otro tipo:
+```javascro`t
+/*
+Esto es un comentario de varias líneas linea 1
+linea 2
+linea 3 Ultima linea!
+*/
+```
+---------------------------------
 ### Carga de vectores
 Podemos cargar info de un vector así:
 ```javascript
@@ -41,3 +58,13 @@ Podemos cargar vectores vacios:
 ```javascript
 var meses = []; 
 ```
+------------------------------
+# Introducción a los conceptos básicos de JavaScript
+------------------------------
+------------------------------
+# Introducción a los conceptos básicos de JavaScript
+------------------------------
+------------------------------
+# Introducción a los conceptos básicos de JavaScript
+------------------------------
+
