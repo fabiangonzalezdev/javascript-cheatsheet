@@ -13,6 +13,18 @@ Javascript es flexible, una variable puede ser int, luego string etc
 ## Mostrar datos por pantalla
 La función ```console.log(<mensaje /  variables / funciones>)``` muestra un mensaje por consola /  variables / funciones
 
+## Adjuntar javascript
+podemos ponerlo en el mismo html como
+´´´html
+<script>
+  aca va el codigo
+</script
+´´´
+o podemos agregarlo a otro archivo con src
+  
+´´´html
+  <script src="codigo.js"></script>
+´´´
 
 ---------------------------------
 ### Comentarios
@@ -33,7 +45,7 @@ linea 3 Ultima linea!
 ------------------------------
 # Variables en JS
 ------------------------------
-------------------------------
+
 ## Variables
 ### Tipo de variables
 En javascript podemos encontrar este tipo de variables:
