@@ -10,6 +10,29 @@
 Javascript es case-sensitive
 Javascript es flexible, una variable puede ser int, luego string etc
 
+## Mostrar datos por pantalla
+La función ```console.log(<mensaje /  variables / funciones>)``` muestra un mensaje por consola /  variables / funciones
+
+
+---------------------------------
+### Comentarios
+
+Hay 2 tipos de comentarios:
+```javascript
+// este es un comentario de una sola línea
+```
+otro tipo:
+```javascript
+/*
+Esto es un comentario de varias líneas linea 1
+linea 2
+linea 3 Ultima linea!
+*/
+```
+
+------------------------------
+# Variables en JS
+------------------------------
 ------------------------------
 ## Variables
 ### Tipo de variables
@@ -33,22 +56,12 @@ tipo const (Se asigna una vez pero no se puede volver a asignar:
 ```javascript
 const nombre = 'juan';
 ```
----------------------------------
-### Comentarios
 
-Hay 2 tipos de comentarios:
+booleanos (true o false | 1 o 0):
 ```javascript
-// este es un comentario de una sola línea
+var esbooleano = true;
 ```
-otro tipo:
-```javascript
-/*
-Esto es un comentario de varias líneas linea 1
-linea 2
-linea 3 Ultima linea!
-*/
-```
-
+Javascript permite cambiar de tipos de variables y eso hay que tener cuidado! Podemos tener una variable en string y cambiarla a numerica!
 
 ---------------------------------
 ### Carga de vectores
@@ -60,9 +73,48 @@ Podemos cargar vectores vacios:
 ```javascript
 var meses = []; 
 ```
+Todos los indices de los vectores empiezan en 0.
+
 ------------------------------
-# Introducción a los conceptos básicos de JavaScript
+# Estructura de datos en JS
 ------------------------------
+## Estructura IF:
+
+```javascript
+If (<condiciones>) {
+// Código a ejecutar cuando se cumplen las condiciones
+} else {
+// Código a ejecutar cuando NO se cumple alguna de las condiciones
+}
+```
+
+## Bucle FOR
+```javascript
+for(let contador=1; contador<=10; contador++) { 
+console.log(contador);
+}
+```
+
+## Bucle While
+```javascript
+var contador = 1; 
+while(contador<=10) {
+console.log(contador);
+contador++;
+}
+```
+
+## Funciones
+```javascript
+function sumar(valor1, valor2) { 
+return valor1 + valor2;
+}
+```
+y llamamos la funcion asi:
+```javascript
+var total = sumar(10,20); 
+console.log(total);
+```
 ------------------------------
 # Introducción a los conceptos básicos de JavaScript
 ------------------------------
