@@ -1,7 +1,7 @@
 # Cheatsheet + Documentación Javascript💻
 
 ¿Este es un cheatsheet mas de Javascript? No. Este cheatshet tambien contiene un wiki con la documentación mas importante de python acá:
-[Wiki Documentación Python](https://github.com/fabiansato/javascript-cheatsheet/wiki "Documentación  deJavascript")
+[Wiki Documentación Javascript](https://github.com/fabiansato/javascript-cheatsheet/wiki "Documentación de Javascript")
 
 ------------------------------
 # Introducción a los conceptos básicos de JavaScript
