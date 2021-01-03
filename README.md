@@ -41,13 +41,15 @@ Hay 2 tipos de comentarios:
 // este es un comentario de una sola línea
 ```
 otro tipo:
-```javascro`t
+```javascript
 /*
 Esto es un comentario de varias líneas linea 1
 linea 2
 linea 3 Ultima linea!
 */
 ```
+
+
 ---------------------------------
 ### Carga de vectores
 Podemos cargar info de un vector así:
