@@ -264,6 +264,15 @@ Eliminar una clase CSS a un elemento
 elemento.classList.remove(‘clase-css-a-borrar’);
 ```
 
+# Eventos
+
+Eventos disponibles
+Los eventos que tenemos disponibles para interactuar con el usuario son los siguientes:
+●	onClick: se produce cuando el usuario hace click sobre una etiqueta HTML (por ejemplo un botón)
+●	onChange: se produce cada vez que el usuario cambia el contenido de una etiqueta del tipo input (y abandona el campo de entrada)
+●	onFocus: se produce cada vez que el usuario ingresa a una etiqueta del tipo input
+●	onSubmit: se produce cuando el usuario envía un formulario
+●	onScroll: que se produce cada vez que el usuario se desplaza en la página (siempre y cuando exista un desplazamiento de la barra de scroll lateral)
 
 
 
