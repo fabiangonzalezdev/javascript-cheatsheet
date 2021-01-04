@@ -195,6 +195,15 @@ parrafo.parentNode.removeChild(parrafo);
 <p id="provisional">...</p>
 ```
 
+## Seleccionar datos de un elemento y mostrar sus modulos
+```javascript
+var enlace = document.getElementById("enlace");
+alert(enlace.href); // muestra http://www...com
+```
+```html
+<a id="enlace" href="http://www...com">Enlace</a>
+```
+Vemos como tomanos el id del enlace y mostramos su href
 
 ------------------------------
 # AAAAAAAAAAAA
