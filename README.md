@@ -131,10 +131,11 @@ console.log(total);
 ------------------------------
 # Introducción y manejo del DOM
 ------------------------------
-árbol de nodos:
+## Árbol de nodos:
+
 <img src="https://fabiansato.github.io/imagenes/javascript-nodos2.gif">
 
-tipos de nodos creados:
+## Tipos de nodos creados:
 ```html
 ●	Document, nodo raíz del que derivan todos
 
@@ -146,8 +147,14 @@ tipos de nodos creados:
 
 ●	Comment, representa los comentarios incluidos en la página.
 ```
+## Hay 3 funciones para acceder directamente a un nodo:
+```javascript
+getElementsByTagName(nombreEtiqueta)
+getElementsByClassName(nombreAtributo)
+getElementById(id)
+```
 
 ------------------------------
-# Introducción a los conceptos básicos de JavaScript
+# AAAAAAAAAAAA
 ------------------------------
 
