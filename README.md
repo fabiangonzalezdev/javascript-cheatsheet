@@ -79,7 +79,8 @@ Javascript permite cambiar de tipos de variables y eso hay que tener cuidado! Po
 ### Carga de vectores
 Podemos cargar info de un vector así:
 ```javascript
-var meses = [“Enero”, “Febrero”, “Marzo”, “Abril”, “Mayo”, “Junio”, “Julio”, “Agosto”, Septiembre”, “Octubre”, “Noviembre”, “Diciembre”]; 
+var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']; //vector con cantidad de meses
+
 ```
 Podemos cargar vectores vacios:
 ```javascript
