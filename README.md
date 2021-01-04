@@ -15,16 +15,16 @@ La función ```console.log(<mensaje /  variables / funciones>)``` muestra un men
 
 ## Adjuntar javascript
 podemos ponerlo en el mismo html como
-´´´html
+```html
 <script>
   aca va el codigo
 </script
-´´´
+```
 o podemos agregarlo a otro archivo con src
   
-´´´html
+```html
   <script src="codigo.js"></script>
-´´´
+```
 
 ---------------------------------
 ### Comentarios
