@@ -205,6 +205,68 @@ alert(enlace.href); // muestra http://www...com
 ```
 Vemos como tomanos el id del enlace y mostramos su href
 
+ejemplo con imagenes:
+```javascript
+var imagen = document.getElementById("imagen");
+alert(imagen.style.margin);
+```
+```html
+<img id="imagen" style="margin:0; border:0;" src="logo.png" />
+```
+
+## Para propiedades CSS con nombre compuesto, se accede eliminando los guiones (-).
+```javascript
+●	font-weight → fontWeight
+●	line-height → lineHeight
+●	border-top-style → borderTopStyle
+●	list-style-image → listStyleImage
+```
+
+
+
+## QuerySelector
+
+Permite recorrer el documento de una forma más fácil que las opciones anteriores, pudiendo utilizar los selectores CSS.
+
+```javascript
+document.querySelector(‘<selector CSS>’);
+document.querySelector(‘.menu’); 
+document.querySelector(‘#id-principal .clase-secundaria’);
+```
+Retorna solo la primer ocurrencia
+
+### QuerySelectorAll
+
+Retorna todas las ocurrencias
+```javascript
+document.querySelectorAll(‘<selector CSS>’);
+```
+
+#### Class
+
+Modificar el class desde JS
+
+Cambio de las clases de un elemento (respuesta de getElementById, querySelector, etc) 
+```javascript
+elemento.className = ‘nueva-clase-css’;
+```
+
+#### Agregar class
+
+Agregar una clase CSS a un elemento 
+```javascript
+elemento.classList.add(‘nueva-clase-css’);
+```
+
+#### Eliminar un class
+Eliminar una clase CSS a un elemento 
+```javascript
+elemento.classList.remove(‘clase-css-a-borrar’);
+```
+
+
+
+
 ------------------------------
 # AAAAAAAAAAAA
 ------------------------------
