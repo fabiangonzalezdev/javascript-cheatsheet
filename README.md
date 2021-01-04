@@ -266,16 +266,116 @@ elemento.classList.remove(‘clase-css-a-borrar’);
 
 # Eventos
 
-Eventos disponibles
-Los eventos que tenemos disponibles para interactuar con el usuario son los siguientes:
-●	onClick: se produce cuando el usuario hace click sobre una etiqueta HTML (por ejemplo un botón)
-●	onChange: se produce cada vez que el usuario cambia el contenido de una etiqueta del tipo input (y abandona el campo de entrada)
-●	onFocus: se produce cada vez que el usuario ingresa a una etiqueta del tipo input
-●	onSubmit: se produce cuando el usuario envía un formulario
-●	onScroll: que se produce cada vez que el usuario se desplaza en la página (siempre y cuando exista un desplazamiento de la barra de scroll lateral)
+
+●	`onClick`: se produce cuando el usuario hace click sobre una etiqueta HTML (por ejemplo un botón)
+
+●	`onChange`: se produce cada vez que el usuario cambia el contenido de una etiqueta del tipo input (y abandona el campo de entrada)
+
+●	`onFocus`: se produce cada vez que el usuario ingresa a una etiqueta del tipo input
+
+●	`onSubmit`: se produce cuando el usuario envía un formulario
+
+●	`onScroll`: que se produce cada vez que el usuario se desplaza en la página (siempre y cuando exista un desplazamiento de la barra de scroll lateral)
 
 
 
+## OnClick Ejemplo
+```html
+<script>
+function presionoBoton() { alert('Presiono botón');
+}
+</script>
+<body>
+...
+<button onClick="presionoBoton()">Botón</button>
+...
+</body>
+```
+Cuando el usuario hace click sobre Botón, se muestra un alerta con el mensaje “Presionó botón”.
+
+## Onchange ejemplo
+
+```html
+<script>
+function cambioInput() { console.log("Cambio el valor");
+}
+</script>
+<body>
+...
+<input type="text" onChange="cambioValor()">
+...
+</body>
+```
+
+### Onfocus ejemplo
+
+```html
+<script>
+function accedioAlElemento() { console.log("Accedió al elemento");
+}
+</script>
+<body>
+...
+<input type="text" onFocus="accedioAlElemento()">
+...
+</body>
+```
+
+### Onsubmit ejemplo:
+
+```html
+<script>
+function envioFormulario() { console.log('Envio formulario');
+}
+</script>
+<body>
+...
+<form onsubmit="envioFormulario()">
+...
+</form>
+...
+</body>
+```
+
+
+##Parámetros a los eventos
+Cuando se produce un evento, también tenemos la posibilidad de acceder al contexto del mismo (en donde se ejecutó el mismo). Por ejemplo:
+●	El input en el cual se produjo el evento, y al valor
+
+●	El formulario en el cual se produjo el submit
+
+●	El botón que fue presionado
+
+## Onchange ejemplo:
+
+```html
+<script>
+function cambioValor(e) {
+console.log("Cambio el valor del input y ahora es " + e.target.value);
+}
+</script>
+<body>
+...
+<input type="text" onChange="cambioValor(event)">
+...
+</body>
+```
+
+## OnSubmit y preventDefault() Ejemplo:
+
+```html
+<script>
+function envioFormulario(e) { console.log('Envio formulario'); e.preventDefault();
+
+}
+</script>
+</head>
+<body>
+<form onsubmit="envioFormulario(event)">
+<input type="text">
+<button type="submit">Enviar</button>
+</form>
+```
 ------------------------------
 # AAAAAAAAAAAA
 ------------------------------
