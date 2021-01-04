@@ -129,8 +129,22 @@ var total = sumar(10,20);
 console.log(total);
 ```
 ------------------------------
-# Introducción a los conceptos básicos de JavaScript
+# Introducción y manejo del DOM
 ------------------------------
+
+tipos de nodos creados:
+```html
+●	Document, nodo raíz del que derivan todos
+
+●	Element, cada una de las etiquetas. Único nodo que puede contener atributos y del que pueden derivar otros nodos.
+
+●	Attr, se define uno para cada par atributo=valor
+
+●	Text, contiene el texto encerrado por una etiqueta
+
+●	Comment, representa los comentarios incluidos en la página.
+```
+
 ------------------------------
 # Introducción a los conceptos básicos de JavaScript
 ------------------------------
