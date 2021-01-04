@@ -154,7 +154,8 @@ getElementsByClassName(nombreAtributo)
 getElementById(id)
 ```
 
-## Crear un nodo
+## ** Crear un nodo
+-------------------------
 
 Recordar que cada elemento genera 2 nodos. 4 pasos:
 1.	Creación de un nodo de tipo Element que represente al elemento.
@@ -184,8 +185,15 @@ parrafo.appendChild(contenido);
 // Añadir el nodo Element como hijo de la página 
 document.body.appendChild(parrafo);
 ```
-
-
+## Eliminar un nodo
+Afortunadamente, eliminar un nodo del árbol DOM de la página es mucho más sencillo que añadirlo. En este caso, solamente es necesario utilizar la función  `removeChild(nodo)` que debe ser invocada desde el elemento padre. Para acceder al padre de un nodo: `nodoHijo.parentNode`
+```javascript
+var parrafo = document.getElementById("provisional");
+parrafo.parentNode.removeChild(parrafo);
+```
+```html
+<p id="provisional">...</p>
+```
 
 
 ------------------------------
