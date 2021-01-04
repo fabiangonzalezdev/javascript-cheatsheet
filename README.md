@@ -131,6 +131,8 @@ console.log(total);
 ------------------------------
 # Introducción y manejo del DOM
 ------------------------------
+árbol de nodos:
+<img src="https://fabiansato.github.io/imagenes/javascript-nodos2.gif">
 
 tipos de nodos creados:
 ```html
