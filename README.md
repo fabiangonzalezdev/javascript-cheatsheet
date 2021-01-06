@@ -232,7 +232,17 @@ Permite recorrer el documento de una forma más fácil que las opciones anterior
 document.querySelector(‘<selector CSS>’);
 document.querySelector(‘.menu’); 
 document.querySelector(‘#id-principal .clase-secundaria’);
+
 ```
+ejemplo con uso:
+
+```javascript
+let elem1 = document.querySelector('#nombreid');
+let elem2 = document.querySelector('.clase');
+
+
+```
+
 Retorna solo la primer ocurrencia
 
 ### QuerySelectorAll
