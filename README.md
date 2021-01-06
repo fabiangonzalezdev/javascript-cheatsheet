@@ -238,9 +238,8 @@ ejemplo con uso:
 
 ```javascript
 let elem1 = document.querySelector('#nombreid');
-let elem2 = document.querySelector('.clase');
-
-
+let elem2 = document.querySelector('.clase'); //solo trae la primer clase que matchea
+let elem3 = document.querySelectorAll('.clase'); //trae todas las clases que matchea
 ```
 
 Retorna solo la primer ocurrencia
