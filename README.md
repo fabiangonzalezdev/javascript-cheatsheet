@@ -234,15 +234,9 @@ document.querySelector(‘.menu’);
 document.querySelector(‘#id-principal .clase-secundaria’);
 
 ```
-ejemplo con uso:
-
-```javascript
-let elem1 = document.querySelector('#nombreid');
-let elem2 = document.querySelector('.clase'); //solo trae la primer clase que matchea
-let elem3 = document.querySelectorAll('.clase'); //trae todas las clases que matchea
-```
 
 Retorna solo la primer ocurrencia
+pero...
 
 ### QuerySelectorAll
 
@@ -251,6 +245,20 @@ Retorna todas las ocurrencias
 document.querySelectorAll(‘<selector CSS>’);
 ```
 
+
+ejemplo con uso:
+
+```javascript
+let elem1 = document.querySelector('#nombreid');
+let elem2 = document.querySelector('.clase'); //solo trae la primer clase que matchea
+let elem3 = document.querySelectorAll('.clase'); //trae todas las clases que matchea
+```
+## obtener valores de inputs (formularios)
+podemos obtener los valores del imput poniendo `variable.value`
+```javascript
+let nombre = document.querySelector('#nombre');
+                console.log('el usuario hizo click', nombre.value);
+```
 #### Class
 
 Modificar el class desde JS
