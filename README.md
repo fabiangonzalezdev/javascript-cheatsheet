@@ -93,7 +93,7 @@ Todos los indices de los vectores empiezan en 0.
 vector.push(i);
 ```
 
-## eliminar un vector determinado
+## buscar datos de un vector y eliminarlos
 se crea una funcion que se llama:
 ```javascript
 function removeritem(arr, item) {
