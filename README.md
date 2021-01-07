@@ -88,6 +88,25 @@ var meses = [];
 ```
 Todos los indices de los vectores empiezan en 0.
 
+## agregar item al vector
+```javascript
+vector.push(i);
+```
+
+## eliminar un vector determinado
+se crea una funcion que se llama:
+```javascript
+function removeritem(arr, item) {
+    let i;
+    while ((i = arr.indexOf(item)) !== -1) {
+        arr.splice(i, 1);
+    }
+
+
+}
+```
+
+
 ------------------------------
 # Estructura de datos en JS
 ------------------------------
@@ -191,10 +210,20 @@ Afortunadamente, eliminar un nodo del árbol DOM de la página es mucho más sen
 var parrafo = document.getElementById("provisional");
 parrafo.parentNode.removeChild(parrafo);
 ```
+
 ```html
 <p id="provisional">...</p>
 ```
 
+## eliminar contenido de un nodo
+
+```javascript
+    for (let e = 0; e < 21; e++) {
+        if (parrafo.hasChildNodes()) {
+            parrafo.removeChild(parrafo.firstChild);
+        }
+    }
+```
 ## Seleccionar datos de un elemento y mostrar sus modulos
 ```javascript
 var enlace = document.getElementById("enlace");
