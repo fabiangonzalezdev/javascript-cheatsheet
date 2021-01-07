@@ -1,555 +1,428 @@
 # Cheatsheet + Documentación Javascript💻
 
-¿Este es un cheatsheet mas de python? No. Este cheatshet tambien contiene un wiki con la documentación mas importante de python acá:
-[Wiki Documentación Python](https://github.com/fabiansato/javascript-cheatsheet/wiki "Documentación Python")
+¿Este es un cheatsheet mas de Javascript? No. Este cheatshet tambien contiene un wiki con la documentación mas importante de python acá:
+[Wiki Documentación Javascript](https://github.com/fabiansato/javascript-cheatsheet/wiki "Documentación de Javascript")
 
 ------------------------------
-## Tipos de variables
-#### tres tipos de datos: 
-
-```javascript
-numericos, booleanos, textos
-```
-
-#### Asignacion de variables
-```javascript
-numero = 10
-```
-
-
-
-#### Datos booleanos
-```javascript
-Valor = True
-Valor = False
-```
-
-### entrada de datos 
-```javascript
-nombre = input("mensaje al usuario")
-```
-el input te lo guarda como cadena
-entonces podemos asingnar el tipo antes de poner el input
-```javascript
-numero = int(input("ingresar un numero"))
-```
-cambiar el float por el tipo de variable, int, float string o boolean
-
+# Introducción a los conceptos básicos de JavaScript
 ------------------------------
+## Condiciones
+Javascript es case-sensitive
+Javascript es flexible, una variable puede ser int, luego string etc
+
 ## Mostrar datos por pantalla
-#### Imprimir un string
-```javascript
-print("hola mundo")
+La función ```console.log(<mensaje /  variables / funciones>)``` muestra un mensaje por consola /  variables / funciones
+
+## Adjuntar javascript
+podemos ponerlo en el mismo html como
+```html
+<script>
+  aca va el codigo
+</script
 ```
-
-#### salto de linea 
-```javascript
-\n
+o podemos agregarlo a otro archivo con src
+  
+```html
+  <script src="codigo.js"></script>
 ```
-
-#### imprimir el tipo de variable
-```javascript
-print(type(nombrevariable))
-```
-
-#### mostrar int o float
-Si ponemos un valor entero (int) ej 10 , un valor flotante (float) 10.5
-ingresar comillas simples dentro de comillas dobles:
-```javascript
-variable = "la verdad o 'la verdad'"
-```
-
-
-### Separadores en print
-Podemos separar internamente datos con la palabra clave "sep=" y terminar con "end="
-```javascript
-print(1, 2, 3, sep=', ', end='. ')
-print(4, 5, 6, sep=' * ', end='.')
-```
-
-
-#### concatener
-```javascript
-print ("el resultado es: ",resultado)
-colcamos unca coma para concatenar
-```
-
-#### tipado dinamico
-podemos almacenar diferentes tipos de variables
-```javascript
-valor = 20
-print(valor)
-valor = "Sato"
-print (valor)
-```
-
-#### comentarios
-
-```javascript
-# esto es un comentario 
-''' comentario multilinea
-esto es un comentario multinea ***
-```
-----------------------------------------
-### operadores aritmeticos
-
-```javascript
-suma +
-resta -
-multiplicar *
-dividir /
-division entero (redondeado para abajo // 
-modulo (que vamos a divir el resto de la division) %
-exponenciacion  **
-```
-
-ejemplo:
-```javascript
-2**3 * (5/2 + (6*5))
-```
-
-#### prioridad de los operadores aritmeticos
-```javascript
-1. parentesis ()
-2. exponenciacion **
-3. multiplicacion, division, modulo *, / , %, NOT
-4. suma y resta +, -, AND
-5.  >, <, ==, >=, <=, !=, or 
-```
-
-----------------------------------------
-### Operadores relacionales
-se utilizan para establecer una relacion entre 2 valores
-compara estos valores entre si y esta comparacion produce 
-un resultado de certeza o falsedad (verdaderos o falsos)
-tienen el mismo nivel de su evaluacion
-los operadores relacionales tienen menor prioridad que los aritmeticos
-```javascript
-> mayor que
-< menor que
->= mayor o igual que
-<= menor o igual que
-!= diferente (distinto que)
-== igual 
-```
-ejemplo:
-```javascript
-resultado = 10 < 20
-print (resultado)
-```
-nos mostrarà verdero o falso.
-
-----------------------------------------
-### operadores logicos
-*permiten construir expreciones logicas y se obtiene como resultados booleanos
-and && (perador de multiplicacion logica)
-or  || (oeperador de suma logica)
-not
-
-#### operando AND
-
-valor1 | AND | valor2  | Resultado
------------- | ------------- |------------- |------------- |
-TRUE | AND | TRUE  | TRUE
-TRUE | AND | FALSE  | FALSE
-FALSE | AND | TRUE  | FALSE
-FALSE | AND | FALSE  | FALSE
-
-
-_Solamente basta un false para que el resultado sea false_
-
-#### operando OR
-
-valor1 | AND | valor2  | Resultado
------------- | ------------- |------------- |------------- |
-TRUE | AND | TRUE  | TRUE
-TRUE | AND | FALSE  |  TRUE
-FALSE | AND | TRUE  | TRUE
-FALSE | AND | FALSE  | FALSE
-
-_Solamente es falso cuando ambos son false false (0 y 0)_
-
-
-#### Operador de NOT negacion.
-```javascript
-not(true) = false
-not(false) = true 
-```
-
-#### Prioridad de los operadores logicos
-
-1. NOT
-2- AND
-3- OR 
-
-
-Ejemplo:
-```javascript
-((a>b) or (a<c))and((a==c) or (a>=b))
-```
-
-aqui tenemos que pensarlo 
-Es muy bueno para hacer matematica discreta.
-
-
---------------------------------
-## Operadores de asignacion
-a = 5 
-a += 5 #suma en asignaciòn.
-a -= 2 #resta en asignacion
-a *= 8 #multiplacion en asignacion
-a /= 9 #division en asignacion 
-a **=8 #potencia en asignicacion
-a %=6 #modulo de la asignicion 
-valores que sirven para acortar el código.
-
------------------------------
-### salidas de datos
-```javascript
-print("hola",nombre,"tienes: ",edad,"años")
-```
-con funciones:
-```javascript
-print("hola {} tienes {} años".format(nombre,edad)
-```
-otra forma desde las ultimas actualizaciones de python:
-```javascript
-print(f"Hola {nombre} tienes {edad} años")
-```
-
-
-
-----------------------------
-### CONDICIONALES
-#### Condicionales (If, else)
-```javascript
-if resultado == 0:
-contenido
-else:
-contenido del else
-```
-
-_podemos haer los valores aparte_
-ej:
-```javascript
-vota=edad>=18 and edad<=70 and distancia<=500
-if vota:
-sasasa
-else:
-```
-
-
-
-#### Condicionales (While)
-```javascript
-while(i<=n):
-    suma=suma+i
-    #print(i,suma)
-    i=i+1
-```
-
-
-#### Condicionales (FOR)
-Se coloca for _variable_ in range (_valor minimo_,_valor maximo_,_sumadevariable_)
-
-```javascript
-for i in range (1,11,2):
-```
-El antarior codigo es for variable _i_ en el rango de iniciacion en 1, hasta 11 con salteos de 2. El último numero no se incluye.
-
-### Condicional for range(min_value, max_value)
-función range(min_value, max_value) genera una secuencia con números min_value , min_value + 1 , ..., max_value - 1 . El último número no está incluido. 
-
-
-### Forma reducida de range () 
-Se realiza de la siguiente manera range(max_value) , en cuyo caso min_value se establece implícitamente en cero:
-```javascript
-for i in range(3):
-    print(i)
-# 0
-# 1
-# 2
-```
-
-### De esta manera, podemos repetir algunas acciones varias veces:
-```javascript
-for i in range(2 ** 2):
-    print('Hello, world!')
-```
-
-#### Ejemplo de secuencia vacia
-```javascript
-for i in range(-5):
-    print('Hello, world!')
-```
-
-
-#### Secuencia decreciente
-Para iterar sobre una secuencia decreciente, podemos usar una forma extendida de range () con tres argumentos: range(start_value, end_value, step) . Cuando se omite, el paso es implícitamente igual a 1. Sin embargo, puede ser cualquier valor distinto de cero. El ciclo siempre incluye start_value y excluye end_value durante la iteración:
-```javascript
-for i in range(10, 0, -2):
-    print(i)
-# 10
-# 8
-# 6
-# 4
-# 2
-```
-----------------------------
-###  MANEJO DE ARCHIVOS
-
-Abrir archivo de lectura : 
-```javascript
-f = open("fichero.txt") 
-```
-Abrir archivo de lectura : 
-```javascript
-f = open("fichero.txt", "r") 
-```
-
-Abrir archivo para escribir desde cero : 
-```javascript
-f = open ("fichero.txt", "w") 
-
-Abrir archivo para añadir al final :
-```javascript
-f = open ("fichero.txt", "a") 
-```
-⚠️ Recordar siempre al terminar de utilizar un archivo tanto para lectura o escritura cerrarlo.
- No hacerlo puede traer problemas para poder utilizarlo luego.
-
-Simplemente basta llamar a 
-```javascript
-f.close() 
-```
-Donde f es la variable en donde se almacenó el archivo 
-```javascript
-(ejemplo, f = open("fichero.txt", "r") )
-```
-
-#### Leer de un archivo
-Para leer del archivo, podemos usar las funciones f.readlines() y f.readline() 
-Lectura de todo el archivo de golpe : 
-```javascript
-datos = f.readlines() 
-(datos es una lista con todos los elementos del archivo)
-```
-Lectura de una línea completa : 
-```javascript
-dato = f.readline() 
-```
-(dato es una cadena con la primer línea del archivo)
-
-#### funciones para conocer donde está el cursor en
-el archivo y para ubicarlo en otro lugar
-```javascript
-archivo.tell() 
-archivo.seek() 
-```
-
-#### funciones con write
-```javascript
-función f.write(“texto”)
-f = open("arch.txt","w")
-f.write("Esto es un archivo de texto\n");
-f.write("Generado con python\n");
-f.write("no es hermoso?\n")
-f.close()
-```
-
------------------------------
-### BIBLOTECAS
-#### biblioteca import math
-```javascript
-import math
-math.sqr(numero) #raiz cuadrada
-math.exp(1) #exponente
-math.pi #pi
-math.log(2) #logaritmo
-
-"*"*10 ##multiplica por 10 el contenido de una cadena
-```
-
-----------------------------
-### Biblioteca Random
-Debemos importar la biblioteca para utilizar sus funciones de trabajos aleatorios.
-```javascript
-import random
-```
-uso de biblioteca:
-```javascript
-random.randrange(inico,fin,paso)
-random.randint(inicio,fin)
-
-```
-ejemplo
-```javascript
-import random
-w=random.randrange(1,100,2)
-print("w es:",w)
-
-```
-ejemplo con for range
-```javascript
-for i in range(3):
-	w=random.randrange(1,100,2)
-	print("w es:",w)
-    # Por cada iteración obtiene un numero impar  aleatorio entre 1 y 99 .
-Eventualmente podrían llegar a repetirse los números
-
-```
-```javascript
-import random
-w=random.randint(inicio,fin)
-# Devuelve un entero aleatorio entre inicio y fin incluyendo los extremos.
-
-```
-
-----------------------------
-### FUNCIONES
-#### Funciones integradas
-sirven para hacer conversiones entre tipos de datos
-```javascript
-n = int(10)
-n = float(10)
-n = str("10")
-n = bin(1)
-n = hex(10F)
-n = int("010",2) #convierte un binario a entero
-n = int("0xa",16) #convierte un numero hexa en base 16 a int
-n = abs(-8) #devuelve un balor absoluto de -8
-n = round (5.6) #lo redondea al numero entero mas cercano
-n = len("fabian") #muestra cuantas caracteres tiene el string
-```
-
-
 
 ---------------------------------
-### Strings de caracteres
-#### separa caracter a caracter
-```javascript
-for character in 'hello':
-    print(character)
+### Comentarios
 
+Hay 2 tipos de comentarios:
+```javascript
+// este es un comentario de una sola línea
 ```
-tamaño del caracter:
+otro tipo:
 ```javascript
-a="Hola Mundo"
-len(a)
-```
-
-Recorrer una cadena:
-```javascript
-a="mi cadena"
-
-for caracter in a:
-    print(caracter)
-
-```
-otra forma:
-a="mi cadena"
-```javascript
-for caracter in a:
-    print(caracter, end="")
+/*
+Esto es un comentario de varias líneas linea 1
+linea 2
+linea 3 Ultima linea!
+*/
 ```
 
+------------------------------
+# Variables en JS
+------------------------------
 
------------------------------
-### FUNCIONES
+## Variables
+### Tipo de variables
+En javascript podemos encontrar este tipo de variables:
 ```javascript
-de f NOMBRE( LISTA DE PARAMETROS ) :
-SENTENCIAS
-```
-ejemplo:
-```javascript
-de f mostrarGuion ( ) :
-pr int ( "-" , end="" )
+Numericas, strings, arrays, booleans
 ```
 
-Pasar variables por argumentos:
+### Carga de variables
+tipo var (Se puede asignar con '' o con "") (es valida fuera del for)
 ```javascript
-argumento = "Nunca digas nunca."
-imprimirDosVeces ( argumento )
+var nombre = 'juan';
 ```
 
-
------------------------------
-### LISTAS (strings)
-cracion de listas:
+tipo let (Se puede asignar con '' o con "") (solo es valido en un fragmento de codigo, ejemplo dentro solo de un for)
 ```javascript
-lista = [7; 3; 4; 6; 10]
-```
-longitud de lista:
-```javascript
-len(lista)
-```
-agregar un elemento al final de la lista:
-```javascript
-lista:append(2)
-```
-quitar elementos de la lista:
-```javascript
-lista.pop(3)
-#quita el tercer elemento de la lista empezando por 0
-```
-mostrar toda la lista por pantalla:
-```javascript
-print(lista)
+let nombre = 'juan';
 ```
 
-Recorrer listas:
+tipo const (Se asigna una vez pero no se puede volver a asignar:
 ```javascript
-animales = [''gato'', ''perro'', ''raton'']
-i = 0
-#forma 1
-while (i < len(animales)):
-print(animales[i])
-i = i + 1
-#forma 2
-for i in range(len(animales)):
-print (animales[i])
-#forma 3
-for elemento in animales:
-print (elemento)
+const nombre = 'juan';
+```
+
+booleanos (true o false | 1 o 0):
+```javascript
+var esbooleano = true;
+```
+Javascript permite cambiar de tipos de variables y eso hay que tener cuidado! Podemos tener una variable en string y cambiarla a numerica!
+
+---------------------------------
+### Carga de vectores
+Podemos cargar info de un vector así:
+```javascript
+var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']; //vector con cantidad de meses
+
+```
+Podemos cargar vectores vacios:
+```javascript
+var meses = []; 
+```
+Todos los indices de los vectores empiezan en 0.
+
+## agregar item al vector
+```javascript
+vector.push(i);
+```
+
+## buscar datos de un vector y eliminarlos
+se crea una funcion que se llama:
+```javascript
+function removeritem(arr, item) {
+    let i;
+    while ((i = arr.indexOf(item)) !== -1) {
+        arr.splice(i, 1);
+    }
+
+
+}
 ```
 
 
------------------------------
-### MATRICES (arrays)
-Las matrices en Python son listas de listas.
-se escriben así:
+------------------------------
+# Estructura de datos en JS
+------------------------------
+## Estructura IF:
+
 ```javascript
-[lista0, lista1,...,listaN]
-```
-ejemplo:
-```javascript
-numeros = [[1,2,4],[4,3,2],[9,8,7],[6,4,3],[5,6,8]]
-	print(numeros[0][2]) # imprime 4
-	print(numeros[3][0]) # imprime 6
-	print(numeros[4][3]) # error
-```
-También podemos imprimir la matriz entera:
-````javascript
-print(numeros)
-print(numeros[2])
-```
-saber la longitud de una variable
-```javascript
-longitud = len(numeros)
-print (longitud) #imprime 5
-print(len(numeros[2])) #imprime 3
-```
-Agregar datos a un array
-```javascript
-#por ejemplo
-numeros[2].append(5) 
-agrega un 5 al final de la lista 2
+If (<condiciones>) {
+// Código a ejecutar cuando se cumplen las condiciones
+} else {
+// Código a ejecutar cuando NO se cumple alguna de las condiciones
+}
 ```
 
-quitar datos en un array:
+## Bucle FOR
 ```javascript
-numeros[3].pop(1) 
-elimina la posición 1 de la lista 3
+for(let contador=1; contador<=10; contador++) { 
+console.log(contador);
+}
 ```
 
+## Bucle While
+```javascript
+var contador = 1; 
+while(contador<=10) {
+console.log(contador);
+contador++;
+}
+```
+
+## Funciones
+```javascript
+function sumar(valor1, valor2) { 
+return valor1 + valor2;
+}
+```
+y llamamos la funcion asi:
+```javascript
+var total = sumar(10,20); 
+console.log(total);
+```
+------------------------------
+# Introducción y manejo del DOM
+------------------------------
+## Árbol de nodos:
+
+<img src="https://fabiansato.github.io/imagenes/javascript-nodos2.gif">
+
+## Tipos de nodos creados:
+```html
+●	Document, nodo raíz del que derivan todos
+
+●	Element, cada una de las etiquetas. Único nodo que puede contener atributos y del que pueden derivar otros nodos.
+
+●	Attr, se define uno para cada par atributo=valor
+
+●	Text, contiene el texto encerrado por una etiqueta
+
+●	Comment, representa los comentarios incluidos en la página.
+```
+## Hay 3 funciones para acceder directamente a un nodo:
+```javascript
+getElementsByTagName(nombreEtiqueta)
+getElementsByClassName(nombreAtributo)
+getElementById(id)
+```
+
+## ** Crear un nodo
+-------------------------
+
+Recordar que cada elemento genera 2 nodos. 4 pasos:
+1.	Creación de un nodo de tipo Element que represente al elemento.
+2.	Creación de un nodo de tipo Text que represente el contenido del elemento.
+3.	Añadir el nodo Text como nodo hijo del nodo Element.
+4.	Añadir el nodo Element a la página,en forma de nodo hijo del nodo correspondiente al lugar en el que se quiere insertar el elemento.
+
+## Implica utilizar 3 funciones DOM:
+
+●	`createElement(etiqueta):` crea un nodo de tipo Element que representa al elemento cuya etiqueta se pasa como parámetro.
+●	`createTextNode(contenido):` crea un nodo de tipo Text que almacena el
+contenido textual de los elementos.
+●	`nodoPadre.appendChild(nodoHijo)`: añade un nodo como hijo de otro nodo. Se debe utilizar al menos dos veces con los nodos habituales: en primer lugar se añade el nodo Text como hijo del nodo Element y a continuación se añade el nodo Element como hijo de algún nodo de la página.
+
+
+Ejemplo para la creación de un párrafo
+```javascript
+// Crear nodo de tipo Element
+var parrafo = document.createElement("p");
+
+// Crear nodo de tipo Text
+var contenido = document.createTextNode("Hola Mundo!");
+
+// Añadir el nodo Text como hijo del nodo Element 
+parrafo.appendChild(contenido);
+
+// Añadir el nodo Element como hijo de la página 
+document.body.appendChild(parrafo);
+```
+## Eliminar un nodo
+Afortunadamente, eliminar un nodo del árbol DOM de la página es mucho más sencillo que añadirlo. En este caso, solamente es necesario utilizar la función  `removeChild(nodo)` que debe ser invocada desde el elemento padre. Para acceder al padre de un nodo: `nodoHijo.parentNode`
+```javascript
+var parrafo = document.getElementById("provisional");
+parrafo.parentNode.removeChild(parrafo);
+```
+
+```html
+<p id="provisional">...</p>
+```
+
+## eliminar contenido de un nodo
+
+```javascript
+    for (let e = 0; e < 21; e++) {
+        if (parrafo.hasChildNodes()) {
+            parrafo.removeChild(parrafo.firstChild);
+        }
+    }
+```
+## Seleccionar datos de un elemento y mostrar sus modulos
+```javascript
+var enlace = document.getElementById("enlace");
+alert(enlace.href); // muestra http://www...com
+```
+```html
+<a id="enlace" href="http://www...com">Enlace</a>
+```
+Vemos como tomanos el id del enlace y mostramos su href
+
+ejemplo con imagenes:
+```javascript
+var imagen = document.getElementById("imagen");
+alert(imagen.style.margin);
+```
+```html
+<img id="imagen" style="margin:0; border:0;" src="logo.png" />
+```
+
+## Para propiedades CSS con nombre compuesto, se accede eliminando los guiones (-).
+```javascript
+●	font-weight → fontWeight
+●	line-height → lineHeight
+●	border-top-style → borderTopStyle
+●	list-style-image → listStyleImage
+```
+
+
+
+## QuerySelector
+
+Permite recorrer el documento de una forma más fácil que las opciones anteriores, pudiendo utilizar los selectores CSS.
+
+```javascript
+document.querySelector(‘<selector CSS>’);
+document.querySelector(‘.menu’); 
+document.querySelector(‘#id-principal .clase-secundaria’);
+
+```
+
+Retorna solo la primer ocurrencia
+pero...
+
+### QuerySelectorAll
+
+Retorna todas las ocurrencias
+```javascript
+document.querySelectorAll(‘<selector CSS>’);
+```
+
+
+ejemplo con uso:
+
+```javascript
+let elem1 = document.querySelector('#nombreid');
+let elem2 = document.querySelector('.clase'); //solo trae la primer clase que matchea
+let elem3 = document.querySelectorAll('.clase'); //trae todas las clases que matchea
+```
+## obtener valores de inputs (formularios)
+podemos obtener los valores del imput poniendo `variable.value`
+```javascript
+let nombre = document.querySelector('#nombre');
+                console.log('el usuario hizo click', nombre.value);
+```
+#### Class
+
+Modificar el class desde JS
+
+Cambio de las clases de un elemento (respuesta de getElementById, querySelector, etc) 
+```javascript
+elemento.className = ‘nueva-clase-css’;
+```
+
+#### Agregar class
+
+Agregar una clase CSS a un elemento 
+```javascript
+elemento.classList.add(‘nueva-clase-css’);
+```
+
+#### Eliminar un class
+Eliminar una clase CSS a un elemento 
+```javascript
+elemento.classList.remove(‘clase-css-a-borrar’);
+```
+
+# Eventos
+
+
+●	`onClick`: se produce cuando el usuario hace click sobre una etiqueta HTML (por ejemplo un botón)
+
+●	`onChange`: se produce cada vez que el usuario cambia el contenido de una etiqueta del tipo input (y abandona el campo de entrada)
+
+●	`onFocus`: se produce cada vez que el usuario ingresa a una etiqueta del tipo input
+
+●	`onSubmit`: se produce cuando el usuario envía un formulario
+
+●	`onScroll`: que se produce cada vez que el usuario se desplaza en la página (siempre y cuando exista un desplazamiento de la barra de scroll lateral)
+
+
+
+## OnClick Ejemplo
+```html
+<script>
+function presionoBoton() { alert('Presiono botón');
+}
+</script>
+<body>
+...
+<button onClick="presionoBoton()">Botón</button>
+...
+</body>
+```
+Cuando el usuario hace click sobre Botón, se muestra un alerta con el mensaje “Presionó botón”.
+
+## Onchange ejemplo
+
+```html
+<script>
+function cambioInput() { console.log("Cambio el valor");
+}
+</script>
+<body>
+...
+<input type="text" onChange="cambioValor()">
+...
+</body>
+```
+
+### Onfocus ejemplo
+
+```html
+<script>
+function accedioAlElemento() { console.log("Accedió al elemento");
+}
+</script>
+<body>
+...
+<input type="text" onFocus="accedioAlElemento()">
+...
+</body>
+```
+
+### Onsubmit ejemplo:
+
+```html
+<script>
+function envioFormulario() { console.log('Envio formulario');
+}
+</script>
+<body>
+...
+<form onsubmit="envioFormulario()">
+...
+</form>
+...
+</body>
+```
+
+
+##Parámetros a los eventos
+Cuando se produce un evento, también tenemos la posibilidad de acceder al contexto del mismo (en donde se ejecutó el mismo). Por ejemplo:
+●	El input en el cual se produjo el evento, y al valor
+
+●	El formulario en el cual se produjo el submit
+
+●	El botón que fue presionado
+
+## Onchange ejemplo:
+
+```html
+<script>
+function cambioValor(e) {
+console.log("Cambio el valor del input y ahora es " + e.target.value);
+}
+</script>
+<body>
+...
+<input type="text" onChange="cambioValor(event)">
+...
+</body>
+```
+
+## OnSubmit y preventDefault() Ejemplo:
+
+```html
+<script>
+function envioFormulario(e) { console.log('Envio formulario'); e.preventDefault();
+
+}
+</script>
+</head>
+<body>
+<form onsubmit="envioFormulario(event)">
+<input type="text">
+<button type="submit">Enviar</button>
+</form>
+```
+------------------------------
+# AAAAAAAAAAAA
+------------------------------
 
