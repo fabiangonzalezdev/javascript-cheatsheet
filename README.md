@@ -422,6 +422,27 @@ function envioFormulario(e) { console.log('Envio formulario'); e.preventDefault(
 <button type="submit">Enviar</button>
 </form>
 ```
+
+------------------------------
+# JSON
+------------------------------
+
+crear un array con un json interno en un array:
+
+```javascript
+    const productos = [ 
+        { 
+            id:1,
+            name: "Moto g"
+
+        }
+        {
+            id: 2,
+            name: "Moto X"
+
+        }
+    ]
+ ```
 ------------------------------
 # AAAAAAAAAAAA
 ------------------------------
