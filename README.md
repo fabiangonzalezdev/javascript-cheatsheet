@@ -147,6 +147,17 @@ y llamamos la funcion asi:
 var total = sumar(10,20); 
 console.log(total);
 ```
+diferencias de llamar a una funcion con () y sin ()
+```javascript
+      function unaFuncion(){
+      console.log("Esto es una funcion");
+      return 10;
+      }
+
+      console.log("LLamamos a la funcion SIN () y nos dá como resultado: " + unaFuncion);
+     console.log("LLamamos a la funcion con () y nos dá como resultado: " + unaFuncion());
+    console.log("Vemos como al mandar funciones en javascript con () nos devuelve el return")
+```
 ------------------------------
 # Introducción y manejo del DOM
 ------------------------------
