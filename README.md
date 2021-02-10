@@ -158,6 +158,15 @@ diferencias de llamar a una funcion con () y sin ()
      console.log("LLamamos a la funcion con () y nos dá como resultado: " + unaFuncion());
     console.log("Vemos como al mandar funciones en javascript con () nos devuelve el return")
 ```
+
+------------------------------
+# Operadores Ternarios
+------------------------------
+```javascript
+a ? b : c;
+```
+Donde "a" es la condición luego ? "b" es la opción a realizar si la condición es verdadera y ;"c" si la condición es falsa.
+
 ------------------------------
 # Introducción y manejo del DOM
 ------------------------------
