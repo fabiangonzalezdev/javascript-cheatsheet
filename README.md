@@ -668,3 +668,21 @@ class Leon extends Gato {
   }
 }
  ```
+ 
+ ## Mix-ins
+ Subclases abstractas or mix-ins son plantillas de clases. Una clase ECMAScript solo puede tener una clase padre, con lo cual la herencia multiple no es posible. La funcionalidad debe ser proporcionada por la clase padre.
+  ```javascript
+ var calculatorMixin = Base => class extends Base {
+  calc() { }
+};
+
+var randomizerMixin = Base => class extends Base {
+  randomize() { }
+};
+ ```
+ 
+ Una clase que use este método puede ser escrita tal que así:
+  ```javascript
+ class Foo { }
+class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+ ```
