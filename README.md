@@ -479,7 +479,7 @@ En primer lugar necesitas declarar tu clase y luego acceder a ella
 
 
 Expreiones de clases:
- ```
+ ```javascript
 // Anonima
 let Rectangulo = class {
   constructor(alto, ancho) {
