@@ -464,6 +464,40 @@ crear un array con un json interno en un array:
     ]
  ```
 ------------------------------
-# AAAAAAAAAAAA
+# Clases  
 ------------------------------
+Declaración de clases:
+ ```Javascript
+ class Rectangulo {
+  constructor(alto, ancho) {
+    this.alto = alto;
+    this.ancho = ancho;
+  }
+}
+ ```
+En primer lugar necesitas declarar tu clase y luego acceder a ella
 
+
+Expreiones de clases:
+ ```
+// Anonima
+let Rectangulo = class {
+  constructor(alto, ancho) {
+    this.alto = alto;
+    this.ancho = ancho;
+  }
+};
+
+console.log(Rectangulo.name);
+// output: "Rectangulo"
+
+// Nombrada
+let Rectangulo = class Rectangulo2 {
+  constructor(alto, ancho) {
+    this.alto = alto;
+    this.ancho = ancho;
+  }
+};
+console.log(Rectangulo.name);
+// output: "Rectangulo2"
+ ```
