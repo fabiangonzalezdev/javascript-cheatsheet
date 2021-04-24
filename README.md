@@ -478,7 +478,7 @@ Declaración de clases:
 En primer lugar necesitas declarar tu clase y luego acceder a ella
 
 
-Expreiones de clases:
+Expreciones de clases:
  ```javascript
 // Anonima
 let Rectangulo = class {
@@ -500,4 +500,171 @@ let Rectangulo = class Rectangulo2 {
 };
 console.log(Rectangulo.name);
 // output: "Rectangulo2"
+ ```
+ 
+ 
+ ## Métodos prototipo:
+  ```javascript
+ class Rectangulo {
+  constructor (alto, ancho) {
+    this.alto = alto;
+    this.ancho = ancho;
+  }
+  // Getter
+  get area() {
+     return this.calcArea();
+   }
+  // Método
+  calcArea () {
+    return this.alto * this.ancho;
+  }
+}
+
+const cuadrado = new Rectangulo(10, 10);
+
+console.log(cuadrado.area); // 100
+ ```
+ 
+ ## Métodos estáticos
+La palabra clave static define un método estático para una clase. Los métodos estáticos son llamados sin instanciar su clase y no pueden ser llamados mediante una instancia de clase
+ ```
+class Punto {
+  constructor ( x , y ){
+    this.x = x;
+    this.y = y;
+  }
+
+  static distancia ( a , b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
+
+    return Math.sqrt ( dx * dx + dy * dy );
+  }
+}
+
+const p1 = new Punto(5, 5);
+const p2 = new Punto(10, 10);
+ ```
+## "Boxing" con prototipos y métodos estáticos
+Cuando un método estático o método del prototipo es llamado sin un valor para "this" (o con "this" como booleano, cadena, número, undefined o null), entonces el valor de "this" será undefined dentro de la funciona llamada
+ ```javascript
+class Animal {
+  hablar() {
+    return this;
+  }
+  static comer() {
+    return this;
+  }
+}
+
+let obj = new Animal();
+obj.hablar(); // Animal {}
+let hablar = obj.hablar;
+hablar(); // undefined
+
+Animal.comer() // class Animal
+let comer = Animal.comer;
+comer(); // undefined
+ ```
+ 
+ ## Subclases con extends
+ La palabra clave extends es usada en declaraciones de clase o expresiones de clase para crear una clase hija.
+ 
+  ```javascript
+ class Animal {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+
+  hablar() {
+    console.log(this.nombre + ' hace un ruido.');
+  }
+}
+
+class Perro extends Animal {
+  hablar() {
+    console.log(this.nombre + ' ladra.');
+  }
+}
+ ```
+ 
+ ## También se pueden extender las clases tradicionales basadas en funciones:
+  ```javascript
+  function Animal (nombre) {
+  this.nombre = nombre;
+}
+Animal.prototype.hablar = function () {
+  console.log(this.nombre + 'hace un ruido.');
+}
+
+class Perro extends Animal {
+  hablar() {
+    super.hablar();
+    console.log(this.nombre + ' ladra.');
+  }
+}
+
+var p = new Perro('Mitzie');
+p.hablar();
+   ```
+   
+   Fijarse que las clases no pueden extender objectos regulares (literales). Si se quiere heredar de un objecto regular, se debe user    ```Object.setPrototypeOf():   ```:
+   ```javascript
+   var Animal = {
+  hablar() {
+    console.log(this.nombre + 'hace ruido.');
+  }
+};
+
+class Perro {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+  hablar() {
+    console.log(this.nombre + ' ladra.');
+  }
+}
+
+Object.setPrototypeOf(Perro.prototype, Animal);
+
+var d = new Perro('Mitzie');
+d.hablar();
+   ```
+   
+   ## Especies
+   Quizás se quiera devolver objetos Array derivados de la clase array MyArray. El patron species permite sobreescribir constructores por defecto.
+
+Por ejemplo, cuando se usan metodos del tipo map() que devuelven el constructor por defecto, se quiere que esos métodos devuelvan un objeto padre Array, en vez de MyArra
+ ```javascript
+class MyArray extends Array {
+  // Sobre escribe species sobre el constructor padre Array
+  static get [Symbol.species]() { return Array; }
+}
+
+var a = new MyArray(1,2,3);
+var mapped = a.map(x => x * x);
+
+console.log(mapped instanceof MyArray); // false
+console.log(mapped instanceof Array);   // true
+ ```
+ 
+ ## Llamadas a súperclases con super
+ La palabra clave super es usada para llamar funciones del objeto padre.
+  ```javascript
+ class Gato {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+
+  hablar() {
+    console.log(this.nombre + ' hace ruido.');
+  }
+}
+
+class Leon extends Gato {
+  hablar() {
+    super.hablar();
+    console.log(this.nombre + ' maulla.');
+  }
+}
  ```
