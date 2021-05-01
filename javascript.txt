@@ -1,0 +1,698 @@
+-------------JAVAscript
+Javascript desde cero (parte 1)
+instalar visual studio code
+instalar live server
+Pretty Formatter
+JavaScript (ES6) code snippets
+vscode-icons
+
+agregamos un alert dentro del html
+alert('hola mundo!');
+agregamos como src
+es mejor practica agregarlo dentro del body.
+///////////////////////////
+agregamos un prompt.
+
+promt
+${variable}
+
+ const nombre = prompt('Cual es tu nombre?');
+document.querySelector('.contenido').innerHTML = ` ${nombre} está aprendiendo JavaScript Moderno`;
+
+
+    <div class="contenido">
+        <h1>JavaScript Moderno</h1>
+        <a href="http://www.codigoconjuan.com" target="_blank">codigoconjuan.com</a>
+        <p>Introducción</p>
+        <p class="hashtag">#JSModernoConJuan</p>
+    </div>
+	
+///comentar el codigo
+/* varias lineas*/
+// una linea
+tenemos que decir lo que hace el codigo, tenemos que aclararlo. sabemos lo que estamos haciendo.
+
+/// consola
+en firefox, en chrome
+safari, avanzado, mostrar el menu de desarrollo en la varia de menus, tiene mas opciones enfocada en el desarrollo-
+
+console.table // mostará la tabla
+console.error // mostrara si algo salio y lo guarda, es bueno para testing
+
+console.warn //manda mensaje de warning
+console.clean // borra la consola
+console.time();// empezar a ver el tiempo 
+console.timEnd(); // cuando termina el trabajo (a realizar en js)
+objetos: 
+cons objeto =  {
+nombre: "fabian"
+}
+console.log(objeto.fabian);
+///consideraciones
+el punto y coma no es obligatorio, pero es mejor para demostrar que algo es implicitamente diferente.
+ejemplo si ponemos dos console log separados nos dira ok, pero si lo ponemos todo en el mismo lugar.
+recomendacion punto y coma y cada funcion en una linea
+
+lo mejor es usar espacios para poder mas alineado y que se vea al codigo
+
+// ESLINT errores en codigo
+instlamos eslint con nodjs
+npm i -g eslint 
+armamos un archivo .eslintrc.js dentro de la carpeta js
+con la siguiente config:
+{
+	"parserOptions": {
+		"ecmaVersion":6
+	}
+	"rules":{
+		"semi": ["error", "always"]
+	}
+}
+podemos crear una guia de estilos para poder programar.
+ probamos con nustro codigo y nos mostrará si existe algun inconveniente en el código de javascript.
+ 
+ en la consola ejemplo
+ eslint js/app.js 
+nos mostrará que nos faltará los punto y comas
+para solucionarlo haremos en consola:
+ eslint js/app.js --fix
+ 
+--------------------
+/////variables
+existen 3 formas de crear variables en javascript
+var
+let
+cons
+
+var sirve dentro y fuera de la funcion
+let queda solo dentro de una funcion  pero no en ningun
+const, es una constante que no se cambi
+
+var producto = "sarasa";
+// Las variables también se pueden reasignar
+producto = "nuevo valor";
+
+
+// Javascript es un lenguaje de tIpo Dinamico,
+// No se especifican tipos de datos cuando
+// se crea la variable
+var precio = 200;
+console.log(precio);
+
+Debería usar ‘ ’ o “ ” para las cadenas de texto en JavaScript? La respuesta me sorprendió: ambas comillas son iguales excepto en el tratamiento de caracteres de escape.
+
+Ambos tipos de comillas ('') ("") son usados frecuentemente en JavaScript para crear una cadena de texto.
+
+
+Hay una única diferencia entre el uso de las comillas simples y las dobles en JavaScript, y se reduce a qué carácter de comillas tiene que escapar utilizando el carácter de barra diagonal inversa \' o \”.
+
+No habría nada malo en usar: “ ” por defecto, ‘ ’ para cadenas de texto incluyendo comillas dobles, y ` ` para incluir variables o multi-lineas.
+
+Todo se reduce a la preferencia personal. Por ejemplo Airbnbn’s style guide prefiere usar comillas simples, evitar las dobles, y usar backtick literals muy poco.
+
+backlints 
+const webAwareAI = `<div class="cloud">
+<h1>Loading consciousness... It's loading...</h1>
+</div>`
+console.log(webAwareAI)
+
+es un lenguaje de tipado dinamico,
+puede contener un texto y un numero, pero si queremos tipado mas fuerte podemos usar typescript.
+// Javascript es un lenguaje de tIpo Dinamico,
+// No se especifican tipos de datos cuando
+// se crea la variable
+
+var precio = 200;
+console.log(precio);
+podemos inicializar una variable sin valor y asignarlo despues
+
+ejemplo
+var vacio;
+var vacio = "ahora no esta vacio"
+// incializar muchos tipos de variables
+var categoria = 'sarasa', marca = "sarasa", calificacion =5;
+
+LAS VARAIABLES NO puede inicializar con numeros.
+var 05alumnos; ---- NO
+var alumnos05; --si
+
+tampoco terminamos con _ pero si podemos empezar con _; aunque no se recomiendan
+
+siempre tratemos de poner las variables como camel case nombreProducto o como snake nombre_producto (no es comun)
+pascal case (para las clases) siempre inicia con una mayusucola:
+Nombre_Producto
+/////// let
+solo queda la variable dentro de una funcion y no sale
+se trata de evitar var y siempre usar let.
+
+solo termina en el scope de la funcion.
+
+--------------------
+cons no pue ser reasignado
+chau
+las variables con const deber si o si inicializarse con un valor
+
+-----------------------------------------
+strings de datos.
+al poner las comillas simples o dobles ya se crean los strings automaticamente
+const producto = 'Monitor 20 Pulgadas'; // Utiliza comillas sencillas
+const producto2 = "Monitor 20 Pulgadas"; // Utiliza comillas o dobles
+mandamos un string a la varialbe:
+const producto2 = String('Monitor 24 Pulgadas')
+
+crear como objeto:
+const producto3 = new String('Monitor 30 Pulgadas'); // Esto crea un objeto cadena
+
+metodo para saber cuanto de largo tiene un string.
+const producto = "sarasadsadsa sdadasd";
+console.log(producto.legth);
+como saber si en algun lugar tiene una palabra //letra
+console.log(producto.indexOf('monitor'); 
+
+console.log(producto.indexOf("Pulgadas")) // Nos dirá que posición tiene el texto en caso de encontrarlo
+console.log(producto.indexOf('Tablet')); // -1 Significa que no lo pudo encontrar
+
+// Includes
+console.log(producto.includes('Monitor')); // Conocer si un texto existe
+console.log(producto.includes('monitor')); // Conocer si un texto existe
+
+ojo! que es case senstive!
+
+-----------------------------------------
+concatenar ndos textos
+podmos unar con el modulo variable.concat(variable o  string);
+
+// Veamos como concatenar o unir 2 textos o variables:
+const producto = 'Monitor 20 Pulgadas';
+const precio = '30 USD';
+
+console.log(producto.concat('En Descuento')); // Concactenar un string
+console.log(producto.concat(precio)); // Concactenar una variable
+
+tambien podmos con dos variables
+console.log (variable + " texto en string" + variable2);
+`
+tambien podemos concatenar con comas:
+console.log("El Producto" , producto ,  " tiene un precio de ",  precio); // Otra forma
+
+
+// ES6 trajo consigo una mejor forma de concatenar variables que es con algo llamado Template String o template literal
+backticks: `sarasa `
+
+console.log(`El Producto ${producto} tiene un precio de ${precio}`);
+
+`${variable}`
+
+una vez que uno lo practique llega a ser buena.
+
+-----------------------------------------
+cortar espacio en blacno de un string
+
+const producto = '        Monitor 20 Pulgadas      '; 
+
+
+// Eliminar el inicio
+console.log(producto.trimStart()); // Elimina todos los espacios en blancos del inicio
+console.log(producto.trimEnd()); // Elimina todos los espacios en blancos del final
+
+// Un método (que ya tiene rato ) es trim que hace lo mismo
+console.log(producto.trim().length);
+
+console.log(producto);
+console.log(producto.length);
+
+-----------------------------------------
+Reemplazar texto 
+
+// Replace 
+const producto = 'Monitor 20 Pulgadas';
+console.log(producto.replace("20", "24"));
+console.log(producto.replace('Pulgadas', '"'));
+
+// Slice te va a permitir extraer una parte de una cadena
+console.log( producto.slice(0, 10)); // Iniciar en 0 y cortar hasta 10
+console.log(producto.slice(8));// Cortar desde el 8 hasta el fin
+console.log(producto.slice(2, 10)); // cortar desde 2 hasta el 10
+// Existe uno similar a Slice que se llama substring
+console.log( producto.substring(0, 10) );
+
+console.log( producto.substring(2, 1) );  // Si el número es mayor al segundo, va a cortar hacia atras (voltear los números)
+
+// Si has visto algunos sitios web muestran tu primer letra de tu nombre:
+
+const nombre = "Juan";
+console.log(nombre.substring(0,1));
+console.log(nombre.charAt(0)); // corta la primer letra
+Si a repeat le pasas un numero que no es entero se redondea ejemplo repeat(2.4) pasa a ser dos veces
+
+
+
+
+
+// Split
+// tienes que pasar porque cosas vas a dividr, ejemplo, espacio, punto y coma etc. Es muy útil por ejemplo si tiene un listado, puedes dividorlo.
+
+const actividad = 'Estoy aprendiendo Javascript Moderno';
+console.log(actividad.split(" "));
+
+const hobbies = 'Leer, caminar, escuchar musica, escribir, aprender a programar';
+console.log(hobbies.split(", "));
+
+-------------------------------------------
+repeat y split
+
+const producto = 'Monitor 24 pulgadas ';
+const texto = 'en Promoción '.repeat(3)
+console.log(producto.repeat(3)); // repite una cadena de texto
+
+
+-----------------------------------------
+Metodos para convertir mausculas y minusculas.
+//convierte en mayusculas
+console.log(producto.toUpperCase() );
+
+// .toLowerCase()
+console.log(producto.toLowerCase() );
+
+// .toString()
+const cantidad = 200;
+console.log(cantidad);
+console.log(cantidad.toString());
+
+-------------------------------------------
+## Numeros en javascript
+-------------------------------------------
+cons numero = 200 //podemos ponerlo sin "" para identificarlo
+// en la consola un numero se vera en color azul
+
+// todos los numeros se crean de la misma forma, flotantes, decimales, etc
+
+flotante
+se coloca directamente
+let numero2 = 22.23;
+tambien
+var numero3 = .33;
+
+como objeto:
+const numero6 = new Number(80);
+
+------------------
+operadores
+
+suma, resta, division, multiplicacion, modulo
+
+objeto completo de math, enfocadas a las matematicas.
+
+math podemos verlo en la consola
+Math.round(2.4)
+
+redondiar para arriba Math.ceil()
+
+redondear hacia abajo
+Math.floor(numero)
+
+raiz cuadrada:
+Math.sqr(144)
+
+valor abosluto:
+math.abs(500)
+muestra el valor absoluto
+
+potencia:
+math.pow(8, 3) // 8 al cuadrado.
+
+minimo:
+math.min(numero, numero1, numero2) // de una serie de valores obtendremos el minimo
+
+maximo.
+math.max(numero, numero1, numero2) // de una serie de valores obtendremos el max
+
+aleatorio con numeros 0.numero largo
+
+math.random();
+
+//aleatorio dentro de un rango
+
+Math.floor(Math.random() * 30);
+
+// Pi
+resultado = Math.PI;
+// redondeo
+resultado = Math.round(2.5);
+// redondeo abajo o arriba (ceil o floor )
+resultado = Math.ceil(2.2);
+// Raiz cuadrada
+resultado = Math.sqrt(144);
+// Abssoluto
+resultado = Math.abs(-300);
+// Potencia
+resultado = Math.pow(8, 3);
+// Minimo
+resultado = Math.min(3,5,1,2,9,4,2, -3);
+// Max
+resultado = Math.max(4,1,21,4,15,5,11,5);
+// Aleatorio
+resultado = Math.random();
+// Aleatorio dentro de un rango:
+resultado =  Math.floor( Math.random() * 30 );
+
+--------------------
+
+los numeros pueden ser negativos, flotantes, decimales, no hay que poner comillas!!
+// El Orden en que se ejecutan las operaciones en JavaScript es igual que en la escuela
+
+
+let resultado 
+// El orden de las operaciones
+
+resultado = 20 + 30 * 2;
+resultado =  ( 20 + 30 ) * 2;
+
+// 20% De descuento en un carrito de compra.
+resultado = ( 20+10+30+40+50 ) * .20;
+
+console.log(resultado);
+
+
+-----------------------------------------
+incrementar numeros// Veamos como ir incrementando un valor de 1 en 1 o en determinada cantidad
+
+// Incluir incremento por 1 y menos 1
+
+let puntaje = 5;
+puntaje++;
+puntaje--;
+++puntaje; //se suma primero
+--puntaje;
+
+puntaje += 3;
+puntaje -= 3;
+
+console.log(puntaje);
+
+-------------------------------------------
+convertir a string o de string a numero
+
+// Convertir de Strings a Números flotantes o Enteros
+
+console.log(Number.parseInt(numero1)); // Convertir de String a Número
+console.log(Number.parseFloat(numero2)); // Convertir a número con decimales 
+console.log(Number.parseInt(numero3)); 
+
+// Revisar si un número es entero
+console.log(Number.isInteger(numero4) ); // Revisar si un número es entero o no
+console.log(Number.isInteger(numero3) ); //
+
+// Convertir String a numero
+console.log(numero4.toString());
+
+-----------------------------------------
+operador mayor que, operador menor que
+
+// Veamos un capitulo Sobre operadores, previamente ya vimos que existen operadores de suma, resta, multiplicación, pero existen unos muy útiles de compraración
+
+const numero1 = 20;
+const numero2 = "20";
+const numero3 = 30;
+
+// Operador Mayor a 
+console.log( numero1 > numero3 );
+console.log( numero3 > numero1 );
+
+
+// Operador Menor que
+console.log(numero3 < numero1);
+
+
+
+
+-------------------------------------------
+comparar dos valores
+
+// Revisar si 2 valores son iguales o diferentes
+console.log(numero1 == numero3);
+console.log(numero1 == numero2);
+
+
+-----------------------------------------
+
+// Typeof
+console.log( typeof numero1 );
+
+// Operador estricto (revisa valor y tipo de dato)
+console.log(numero1 === numero2 );
+
+
+// Diferente a 
+
+console.log(numero1 != numero3);
+
+console.log(numero1 !== numero2); // comprueba si es diferente en valor y tipo de dato.
+
+-------------------------------------------
+
+// Null y Undefined
+
+// En javascript existen diferentes tipos de datos primitivos a los que hemos visto, además de string y number se tienen booleans que son true o false,  y existen un par más llamados undefined y null
+
+
+// veamos un ejemplo de undefined.
+let numero;
+
+console.log(numero); // La variable esta definida pero su valor no, por lo tanto es undefined...
+console.log(typeof numero)
+
+// En el caso de null es más bien asignarlo
+
+let numero2 = null;
+
+console.log(numero2);
+console.log(typeof numero2); // ahora esto nos dirá que es un objeto, la especificación de ecma que es quien define el standard del lenguaje dice que null debe ser un objeto
+// Comparando null y undefined - Comparar un valor null y un undefined puede ser de las cosas más complicadas
+console.log (numero == numero2);
+
+// Puedes ver que el resultado es true, a pesar de que numero  no tiene un valor, eso usualmente nos lleva a ejecución de código no deseada o con comportamientos extraños ya que comparamos un valor que no existe, y nos retorna true
+
+// para ello llega a ser muy  util el comparador estricto
+console.log(numero === numero2);
+
+// De esta forma no comparamos un falso positivo y evitamos errores.
+-----------------------------------------
+booleans
+// El tipo de dato boolean solo puede tener 2 valores, true o false, veamos como crearlos
+
+const boolean1 = true;
+const boolean2 = false;
+
+
+
+console.log(boolean1);
+console.log(boolean2);
+
+
+console.log(typeof boolean2);
+
+//También un Boolean se puede crear con la palabra new
+
+const boolean3 = new Boolean(true);
+console.log(boolean3);
+console.log(typeof boolean3);
+
+
+// Comparar booleans es exactamente igual que cualquier comparación de números o strings
+
+const boolean1 = true;
+const boolean2 = false;
+
+console.log(boolean1 === boolean2); // comparar 2 variables
+
+console.log(boolean1 === true); // comparar si un boolean es verdadero
+console.log(boolean2 === true);// comparar si un boolean es verdadero
+
+// Aún no hemos llegado a ello, pero muchas personas cometen el siguiente error cuando escriben código javascript en un if
+
+if(boolean1 === true) {
+    console.log('si es true')
+} else {
+    console.log('no, no es true')
+}
+
+// Pero este código se puede simplificar quitando el === true porque ya sabemos que la variable es true
+
+// Este mismo ejemplo aplica si un usuario esta autenticado puede darle me gusta a una foto o ver una página, así como si ya tienes una cuenta en netflix y has pagado 
+con operador ternario:
+console.log( boolean1  ? 'Si es true' : 'No no es true' )
+
+-------------------------------------------
+OBJETOS
+
+// Los objetos son la pieza principal en JavaScript, en lugar de crear diferentes variables:
+
+const nombreProducto = "Monitor 20 Pulgadas";
+const precio = 30;
+const disponible = true;
+
+// Podemos crear un objeto que agrupe toda esta información en una sola variable 
+
+const producto = { // Esto se le conoce como object litera...
+
+}
+
+// Estas llaves despues del signo = representan un objeto
+
+const producto = {
+    nombre: // Esto se le llama una propiedad o llave del objeto
+}
+
+const producto = {
+    nombre: 'Monitor 20 pulgadas' // Nota como en lugar del signo igual se utilizan : , esta sintaxis es propia de los objetos y representa el valor que tendrá la propiedad o la llave del objeto, muchas veces se les dice llave valor
+}
+
+// si deseas agregar más propiedades puedes hacerlo de la siguiente forma
+
+const producto = {
+    nombre: "Monitor 20 pulgadas", // La , es importante, sin ella tendriamos un error
+    precio: 30,
+    disponible: true, // el último elemento puede o no tener la ,
+}
+
+
+
+-----------------------------------------
+acceder a datos del objeto
+// Veamos como acceder a las propiedades de un objeto:
+
+const producto = {
+    nombre: "Monitor 20 pulgadas", // La , es importante, sin ella tendriamos un error
+    precio: 30,
+    disponible: true, // el último elemento puede o no tener la ,
+}
+
+
+console.log(producto);
+
+// Supongamos que deseamos acceder al nombre, en los objetos de javascript existe algo llamado la sintaxis de punto
+
+console.log(producto.nombre);
+console.log(producto.precio);
+console.log(producto.disponible);
+
+// Otra forma aunque no tan común es:
+console.log(producto['nombre']);
+
+
+
+
+// Añadir propiedades nuevas a un objeto...
+// Para añadir nuevas propiedades se utiliza de la misma forma la sintaxis de punto
+producto.imagen = "image.jpg";
+
+
+// Finalmente para eliminar una propiedad se utiliza delete
+
+delete producto.nombre;
+
+console.log(producto);
+
+// Algunas veces deseas asignar el valor de un objeto
+-------------------------------------------
+Object desctructuring
+// Veamos como asignar variables hacia un objeto
+
+
+const producto = {
+    nombre: "Monitor 20 pulgadas", // La , es importante, sin ella tendriamos un error
+    precio: 30,
+    disponible: true, // el último elemento puede o no tener la ,
+}
+
+// antes se hace asì:
+// const nombre = producto.nombre;
+
+
+
+
+// Otra forma de hacerlo y que también es nueva, es con algo llamado object destructuring...
+
+// Destructuring significa, sacar de una esctructura, puede ser complejo, no lo es tanto sobretodo cuando lo practicas
+
+const { nombre } = producto; // se lee asi; se destructura(extrae) la variable nombre desde = el objeto producto y se guarda en la variable "nombre".
+
+
+
+// si deseas extraer más variables;
+const { precio } = producto;
+
+console.log(nombre)
+console.log(precio)
+
+// O puedes hacerlo mejor con 
+
+const {nombre, precio} = producto;  // se lee asi; se destructura(extrae) la variable nombre y precio desde = el objeto producto y se guarda en dos variables "nombre y precio".
+
+
+
+
+
+
+
+-----------------------------------------
+objetos dentro de otros objetos:
+
+// Un objeto puede contener cualquier tipo de dato dentro de el, incluso puede tener otros objetos:, esto se le conoce como Objetos anidados.
+
+
+const producto = {
+    nombre: "Monitor 20 pulgadas",
+    precio: 30,
+    disponible: true,
+    informacion : {
+        peso: '1kg',
+        medida: '1m'
+    }
+}
+
+
+// De nueva cuenta para acceder a un objeto, se utiliza la sintaxis de punto
+
+console.log(producto.informacion);
+console.log(producto.informacion.peso);
+console.log(producto.informacion.medida);
+
+
+-------------------------------------------
+crear el objeto con decontstructuring
+
+// Veamos como hacer destructuring de un objeto que esta dentro de otro objeto..
+
+const producto = {
+    nombre: "Monitor 20 pulgadas",
+    precio: 30,
+    disponible: true,
+    informacion : {
+        peso: '1kg',
+        medida: '1m'
+    }
+}
+
+
+const { nombre, informacion, informacion: { peso, medida } } = producto; // para aceder a cierta parte tenemos que poner dos puntos y colocar el objeto interno
+
+
+console.log(nombre)
+console.log(informacion)
+console.log(peso)
+console.log(medida)
+
+
+-----------------------------------------
+El problema con los objetos
+los mismos se pueden reasignar.
+podemos eliminar contenido de un objeto aunque sea const, incluso con un 
+delete objeto.metodo
+
+-------------------------------------------
+hacer video
+hacer cheatsheet
+hacer cheatsheet en imagenes
+
