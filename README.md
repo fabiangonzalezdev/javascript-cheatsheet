@@ -686,3 +686,13 @@ var randomizerMixin = Base => class extends Base {
  class Foo { }
 class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
  ```
+ 
+------------------------
+widow.localation
+---------------------
+## Autoredirect de pagina en javascript
+```javascript
+<script type="text/javascript">
+            window.location.href = "http://example.com"
+        </script>
+```
