@@ -254,6 +254,71 @@ __________________________
 ```
 
 
+------------------------------
+# Estructura de datos en JS
+------------------------------
+## Estructura IF:
+
+```javascript
+If (<condiciones>) {
+// Código a ejecutar cuando se cumplen las condiciones
+} else {
+// Código a ejecutar cuando NO se cumple alguna de las condiciones
+}
+
+} else if(codincion) {
+// Código a ejecutar cuando NO se cumple alguna de las condiciones y una condicion extra
+}
+```
+
+------------------------------
+# Operadores Ternarios
+------------------------------
+```javascript
+a ? b : c;
+```
+Donde "a" es la condición luego ? "b" es la opción a realizar si la condición es verdadera y ;"c" si la condición es falsa.
+
+## SWITCH
+```javascript
+ switch(condicion) {
+    case '1': 
+    return CONDICIOES
+    break
+    
+    case '2': 
+   return CONDICIOES
+    break
+    
+    case '3': 
+   return CONDICIONES
+    break
+    
+    default: //valor
+   return CONDICIONES
+  }
+}
+
+}
+```
+
+
+## Bucle FOR
+```javascript
+for(let contador=1; contador<=10; contador++) { 
+console.log(contador);
+}
+```
+
+## Bucle While
+```javascript
+var contador = 1; 
+while(contador<=10) {
+console.log(contador);
+contador++;
+}
+```
+
 ---------------------------------
 ### Carga de vectores
 Podemos cargar info de un vector así:
@@ -286,42 +351,7 @@ function removeritem(arr, item) {
 ```
 
 
-------------------------------
-# Estructura de datos en JS
-------------------------------
-## Estructura IF:
 
-```javascript
-If (<condiciones>) {
-// Código a ejecutar cuando se cumplen las condiciones
-} else {
-// Código a ejecutar cuando NO se cumple alguna de las condiciones
-}
-```
-
-## Bucle FOR
-```javascript
-for(let contador=1; contador<=10; contador++) { 
-console.log(contador);
-}
-```
-
-## Bucle While
-```javascript
-var contador = 1; 
-while(contador<=10) {
-console.log(contador);
-contador++;
-}
-```
-
-------------------------------
-# Operadores Ternarios
-------------------------------
-```javascript
-a ? b : c;
-```
-Donde "a" es la condición luego ? "b" es la opción a realizar si la condición es verdadera y ;"c" si la condición es falsa.
 
 ------------------------------
 # Introducción y manejo del DOM
