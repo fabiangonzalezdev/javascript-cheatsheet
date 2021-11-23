@@ -137,6 +137,11 @@ contador++;
 ```
 
 ## Funciones
+Existen dos tipos de funciones:
+1)declarativas
+2) de expresión
+
+funciones declarativas:
 ```javascript
 function sumar(valor1, valor2) { 
 return valor1 + valor2;
@@ -157,6 +162,10 @@ diferencias de llamar a una funcion con () y sin ()
       console.log("LLamamos a la funcion SIN () y nos dá como resultado: " + unaFuncion);
      console.log("LLamamos a la funcion con () y nos dá como resultado: " + unaFuncion());
     console.log("Vemos como al mandar funciones en javascript con () nos devuelve el return")
+```
+Un ejemplo de una función de expresión sería: 
+```javascript
+var suma = function(a,b){return a+b;} 
 ```
 
 ------------------------------
