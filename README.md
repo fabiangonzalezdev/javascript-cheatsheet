@@ -437,7 +437,7 @@ Ejemplo de objetos con funciones:
 Objetos: JS es un lenguaje que está diseñado en un paradigma de objetos. 
 
 Ejemplo de Objeto: 
-
+```javascript
 var miAuto = { 
 marca: "Toyota", 
 modelo: "Corolla", 
@@ -446,8 +446,9 @@ DetalleDelAuto: function(){ // llamamos una funcion dentro del propio objeto
 Console.log(`Auto ${this.modelo} ${this.marca}`); //podemos llamar dentro del objeto 
 } 
  
-
-MiAuto.detalleDelAuto(); 
+//llamamos al objeto:
+MiAuto.detalleDelAuto();
+```
 ------------------------------
 # Introducción y manejo del DOM
 ------------------------------
