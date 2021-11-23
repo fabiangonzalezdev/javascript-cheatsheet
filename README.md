@@ -279,6 +279,8 @@ a ? b : c;
 ```
 Donde "a" es la condición luego ? "b" es la opción a realizar si la condición es verdadera y ;"c" si la condición es falsa.
 
+
+------------------------------
 ## SWITCH
 ```javascript
  switch(condicion) {
@@ -301,7 +303,57 @@ Donde "a" es la condición luego ? "b" es la opción a realizar si la condición
 
 }
 ```
+------------------------------
+# Array
+------------------------------
+Un Array es un tipo de estructura de datos, objeto. Puede guardar datos distintos dentro, guarda los datos en forma de lista. 
 
+Podemos cargar info de un vector así:
+```javascript
+var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']; //vector con cantidad de meses
+```
+
+Podemos cargar vectores vacios:
+```javascript
+var meses = []; 
+```
+
+
+funciones de arrays:
+
+```javascript
+array.lenght devuelve la longitud del array.  //ejemplo console.log(variable.lenght)
+
+console.log(variable[0]); // acceder del index del elemento en posicion 0
+
+array.push(nombrevariableNueva) agrega elementos al final de array. /
+
+array.pop(nombrevariable) elimina un elemento del array. 
+
+array.unshift(nombrevariable) agrega un elemento al array, pero lo agrega en primer lugar. 
+
+array.shift(nombrevariableNueva) **elimina el elemento que está en el inicio del array. 
+
+array.indexOf(variable) ** devuelve la posición de un elemento del array. 
+```
+
+
+
+Todos los indices de los vectores empiezan en 0.
+
+
+## buscar datos de un vector y eliminarlos
+se crea una funcion que se llama:
+```javascript
+function removeritem(arr, item) {
+    let i;
+    while ((i = arr.indexOf(item)) !== -1) {
+        arr.splice(i, 1);
+    }
+
+
+}
+```
 
 ## Bucle FOR
 ```javascript
@@ -319,36 +371,6 @@ contador++;
 }
 ```
 
----------------------------------
-### Carga de vectores
-Podemos cargar info de un vector así:
-```javascript
-var meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']; //vector con cantidad de meses
-
-```
-Podemos cargar vectores vacios:
-```javascript
-var meses = []; 
-```
-Todos los indices de los vectores empiezan en 0.
-
-## agregar item al vector
-```javascript
-vector.push(i);
-```
-
-## buscar datos de un vector y eliminarlos
-se crea una funcion que se llama:
-```javascript
-function removeritem(arr, item) {
-    let i;
-    while ((i = arr.indexOf(item)) !== -1) {
-        arr.splice(i, 1);
-    }
-
-
-}
-```
 
 
 
