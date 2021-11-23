@@ -450,6 +450,86 @@ Console.log(`Auto ${this.modelo} ${this.marca}`); //podemos llamar dentro del ob
 MiAuto.detalleDelAuto();
 ```
 ------------------------------
+# Objects Funcion constructora 
+------------------------------
+```javascript
+function auto (MARCA, MODELO, ANNIO){ //funcion auto para guardar las variables
+this.marca = MARCA; 
+this.modelo = MODELO; 
+this.annio = ANNIO; 
+} 
+var autos = []; //variable desde cero
+for(let i = 0 ; i < 30 ; i++){  //carga 30 autos y guarda en cada variable
+var marca = prompt("Ingresa la marca del auto"); 
+var modelo = prompt("Ingresa el modelo del auto"); 
+var annio = prompt("Ingresa el año del auto"); 
+autos.push(new auto (marca, modelo, annio)); //guarda un nuevo ogjeto y lo guarda en un objeto auto con sus variables
+} 
+ 
+for(let i = 0 ; i < autos.length ; i++){ //bucle para iterar todos los objetos de autos.
+console.log(autos[i]); 
+} 
+```
+
+------------------------------
+# Metodos de recorrido de arrays
+------------------------------
+ 
+
+RECORRER EL CONTENIDO DEL ARRAY:  
+```javascript
+  - array.filter: filtra en base a validaciones (genera un nuevo array)  
+
+  Var nuevo = arrays.filter(function(variableparafiltrar){ 
+
+Return array <= 300; // retornamos una condicion de una posicion del array 
+
+} 
+```
+
+```javascript
+- array.map: regresa un atributo de los objetos (genera un nuevo array) 
+
+  Var nuevo = arrays.map(function(variableparafiltrar){ 
+
+Return array,nombre // retornamos  una condicion (en este caso el nombre) 
+
+} 
+
+ ```
+
+Ejemplo: 
+ 
+```javascript
+var articulos = [ 
+{ nombre: '📱', precio: 1000 }, 
+{ nombre: '💻', precio: 1500 }, 
+{ nombre: '🖥', precio: 2000 }, 
+{ nombre: '⌨️', precio: 100 }, 
+{ nombre: '🖱', precio: 70 }, 
+{ nombre: '🚗', precio: 30000 }, 
+]; 
+ 
+// Método Filter 
+var articulosFiltrados = articulos.filter(function(articulo) { 
+return articulo.precio <= 500; 
+}); 
+ 
+// Método Map 
+var nombreArticulos = articulos.map(function(articulo) { 
+return articulo.nombre; 
+}); 
+ 
+articulosFiltrados; 
+// (2) [{…}, {…}] 
+// 0: {nombre: "⌨️", precio: 100} 
+// 1: {nombre: "🖱", precio: 70} 
+ 
+nombreArticulos; // (5) ["📱", "💻", "🖥", "⌨️", "🚗"] 
+```
+
+
+------------------------------
 # Introducción y manejo del DOM
 ------------------------------
 ## Árbol de nodos:
