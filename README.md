@@ -66,7 +66,26 @@ Undefied
 ```
 ### Tipo de variables OBJETO (predefinidas de javascript):
 ```javascript
+Date (fechas) 
+RegExp (expresiones regulares) 
+Error 
+```
 
+
+### Tipo de variables OBJETO (definidos por el programador / usuario): 
+```javascript
+Funciones simples 
+Clases 
+```
+### Tipo de variables OBJETO (ARRAYS): 
+```javascript
+Serie de elementos o formación tipo vector o matriz 
+```
+
+### Tipo de variables OBJETO (OBJETOS ESPECIALES): 
+```javascript
+objeto global 
+objeto prototipo 
 ```
 ---------------------------
 ## Funciones
