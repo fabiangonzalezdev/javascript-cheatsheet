@@ -475,10 +475,10 @@ console.log(autos[i]);
 # Metodos de recorrido de arrays
 ------------------------------
  
-
 RECORRER EL CONTENIDO DEL ARRAY:  
+ - array.filter: filtra en base a validaciones (genera un nuevo array)  
 ```javascript
-  - array.filter: filtra en base a validaciones (genera un nuevo array)  
+ 
 
   Var nuevo = arrays.filter(function(variableparafiltrar){ 
 
@@ -486,9 +486,9 @@ Return array <= 300; // retornamos una condicion de una posicion del array
 
 } 
 ```
-
-```javascript
 - array.map: regresa un atributo de los objetos (genera un nuevo array) 
+```javascript
+
 
   Var nuevo = arrays.map(function(variableparafiltrar){ 
 
@@ -528,10 +528,64 @@ articulosFiltrados;
 nombreArticulos; // (5) ["📱", "💻", "🖥", "⌨️", "🚗"] 
 ```
 
+------------------------------
+# Recorriendo Arrays con .find(), .forEach() y .some() 
+------------------------------
+find() : Devuelve el primer elemento del array que cumpla con la condición dada 
 
-------------------------------
-# Introducción y manejo del DOM
-------------------------------
+foreach() : Ejecuta lo que le definamos una vez por cada elemento de nuestro array 
+
+some() : Comprueba si al menos un elemento del array cumple con la condición que le damos 
+
+filter() : Devuelve todos los elementos del array que cumplan con la condición dada 
+ 
+```javascrfipt
+var articulos = [
+    { nombre: "Bici", costo: 3000 },
+    { nombre: "TV", costo: 2500 },
+    { nombre: "Libro", costo: 320 },
+    { nombre: "Celular", costo: 10000 },
+    { nombre: "Laptop", costo: 20000 },
+    { nombre: "Teclado", costo: 500 },
+    { nombre: "Audifonos", costo: 1700 },
+];
+
+//filter Genera un nuevo array
+var articulosFiltrados = articulos.filter(function(articulo){
+    return articulo.costo <= 500; //articulos con precio menor a 500 pesos
+});
+
+//map Ayuda a mapear ciertos elementos de los articulos, es necesario generar nuevo array
+var nombreArticulos = articulos.map(function(articulo){
+    return articulo.nombre;
+});
+
+//find Ayuda a encontrar algo dentro del array articulos
+var encuentraArticulo = articulos.find(function(articulo){
+    return articulo.nombre === "Laptop";
+});
+
+//forEach No es necesario generar nuevo array, se utiliza para realizar un recorrido de un array principal
+articulos.forEach(function(articulo){
+    console.log(articulo.nombre);
+});
+
+//some Se genera nuevo array, regresa un condición en Boolean
+var articulosBaratos = articulos.some(function(articulo){
+    return articulo.costo <= 700;
+});
+
+
+//Filter muestra el valor que agreguemos en una funcion externa
+const ages = [32, 33, 16, 40];
+
+const result = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+```
+
 ## Árbol de nodos:
 
 <img src="https://fabiansato.github.io/imagenes/javascript-nodos2.gif">
