@@ -319,7 +319,7 @@ var meses = [];
 ```
 
 
-funciones de arrays:
+metodos de arrays:
 
 ```javascript
 array.lenght devuelve la longitud del array.  //ejemplo console.log(variable.lenght)
@@ -354,15 +354,51 @@ function removeritem(arr, item) {
 
 }
 ```
+-----------------
+Loops (bucles/ciclos)  For y For...of 
+-----------------
 
 ## Bucle FOR
 ```javascript
-for(let contador=1; contador<=10; contador++) { 
+for(let contador=0; contador<=10; contador++) { 
 console.log(contador);
 }
 ```
 
+Ejemplo con arrays:
+```javascript
+for(let i=0; array.lenght; i++) { 
+console.log(array);
+}
+```
+
+
+
+## Bucle FOR OF
+```javascript
+for(var array of arrays) { //recorre el array y "arrays" se crea como nuevo que es el indice de cada array
+console.log(array);
+}
+```
+
+## Bucle FOR IN
+La instrucción for-in itera sobre todas las propiedades enumerables de un objeto que está codificado por cadenas (ignorando los codificados por Símbolos, incluidas las propiedades enumerables heredadas.
+```javascript
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+
+// expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+
+```
+
 ## Bucle While
+En el bucle itera solamente si se cumple una condición
 ```javascript
 var contador = 1; 
 while(contador<=10) {
@@ -372,8 +408,16 @@ contador++;
 ```
 
 
+## Bucle do While
+En do while si o si hace una acción por primera vez
+```javascript
+do {
+    saludarEstudiante(estudiantes[i]);
+    i++;
+} while (i < estudiantes.length)
 
 
+```
 
 ------------------------------
 # Introducción y manejo del DOM
