@@ -45,13 +45,53 @@ linea 3 Ultima linea!
 ------------------------------
 # Variables en JS
 ------------------------------
-
+Se dividen en 2 tipos:
+Tipos primitivos
+y
+Tipos de objeto (a su vez se dividen en 4):
+  1-Predefinidos
+| 2-Definidos por el programador/usuarios
+  3-Arrays
+  4-Objetos especiales
+  
 ## Variables
-### Tipo de variables
-En javascript podemos encontrar este tipo de variables:
+### Tipo de variables primitivas
+
 ```javascript
-Numericas, strings, arrays, booleans
+String
+Number
+Boolean
+Null
+Undefied
 ```
+### Tipo de variables OBJETO (predefinidas de javascript):
+```javascript
+
+```
+
+### Tipo de variables OBJETO (predefinidas de javascript):
+```javascript
+Date (fechas)
+RegExp (expresiones regulares)
+Error
+```
+
+### Tipo de variables OBJETO (definidos por el programador / usuario):
+```javascript
+Funciones simples
+Clases
+```
+### Tipo de variables OBJETO (ARRAYS):
+```javascript
+Serie de elementos o formación tipo vector o matriz
+```
+
+### Tipo de variables OBJETO (OBJETOS ESPECIALES):
+```javascript
+objeto global
+objeto prototipo
+```
+
 
 ### Carga de variables
 tipo var (Se puede asignar con '' o con "") (es valida fuera del for)
