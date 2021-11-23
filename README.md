@@ -586,6 +586,54 @@ function checkAdult(age) {
 }
 ```
 
+------------------------------
+# Eliminando elementos de un Array
+------------------------------
+AGREGAR El método .push() nos permite agregar uno o más elementos al final de un array.
+```javascript
+
+let numArray = [1,2,3,4,5]
+
+function newNum(){
+  numArray.push(6,7)
+}
+
+newNum()
+```
+QUITAR con Shift
+
+// --- SHIFT --
+elimina el primer contenido del array
+```javascript
+//Creamos el array
+let array = [1,2,3,4,5]
+console.log(array)
+
+// Aplicamos .shift()
+let shiftArray = array.shift()
+
+//Revisamos. El output debe de ser [2,3,4,5]
+console.log(array)
+```
+// --- POP--
+elimina el ultimo contenido del array
+```javascript
+//Creamos el array
+let array = [1,2,3,4,5]
+console.log(array)
+
+// Aplicamos .shift()
+let shiftArray = array.pop()
+
+
+//Revisamos. El output debe de ser [1,2,3,4]
+console.log(array)
+```
+
+
+
+
+
 ## Árbol de nodos:
 
 <img src="https://fabiansato.github.io/imagenes/javascript-nodos2.gif">
