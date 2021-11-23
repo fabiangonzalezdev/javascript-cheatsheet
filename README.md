@@ -68,6 +68,38 @@ Undefied
 ```javascript
 
 ```
+---------------------------
+## Funciones
+Existen dos tipos de funciones:
+1)declarativas
+2) de expresión
+
+funciones declarativas:
+```javascript
+function sumar(valor1, valor2) { 
+return valor1 + valor2;
+}
+```
+y llamamos la funcion asi:
+```javascript
+var total = sumar(10,20); 
+console.log(total);
+```
+diferencias de llamar a una funcion con () y sin ()
+```javascript
+      function unaFuncion(){
+      console.log("Esto es una funcion");
+      return 10;
+      }
+
+      console.log("LLamamos a la funcion SIN () y nos dá como resultado: " + unaFuncion);
+     console.log("LLamamos a la funcion con () y nos dá como resultado: " + unaFuncion());
+    console.log("Vemos como al mandar funciones en javascript con () nos devuelve el return")
+```
+Un ejemplo de una función de expresión sería: 
+```javascript
+var suma = function(a,b){return a+b;} 
+```
 
 ### Tipo de variables OBJETO (predefinidas de javascript):
 ```javascript
@@ -114,6 +146,113 @@ booleanos (true o false | 1 o 0):
 var esbooleano = true;
 ```
 Javascript permite cambiar de tipos de variables y eso hay que tener cuidado! Podemos tener una variable en string y cambiarla a numerica!
+
+
+---------------------------
+## Scope
+Existen dos tipos de Scope: 
+
+• Scope Global: lo que está en global no puede acceder a lo que está en local. 
+
+• Scope Local: lo que está en local puede acceder a lo que está en global. 
+
+
+---------------------------
+## Hoisting
+El Hoisting es un proceso donde el compilador aun no carga la declaración de la variable y esta misma se toma como undifined.
+```javascript
+saludo(); 
+ 
+function saludo() { 
+console.log("Hola " + nombre); 
+} 
+ 
+var nombre = "Fabian Sato"; 
+```
+En ecmascript 6 para arriba esto no sucede ya que tenemos las declaraciones de variables con const y let 
+
+---------------------------
+## Coercion
+Coerción es la forma en la que podemos cambiar un tipo de valor a otro, existen dos tipos de coerción: 
+
+Coerción implícita = es cuando el lenguaje nos ayuda a cambiar el tipo de valor. 
+
+Coerción explicita = es cuando obligamos a que cambie el tipo de valor. 
+---------------------------
+## Valores: Truthy y Falsy 
+```javascript
+ 
+
+//Ejemplos en los que Boolean devuelve Falso: 
+Boolean(0); //false 
+Boolean(null); //false 
+Boolean(NaN); //false 
+Boolean(undefined); //false 
+Boolean(false); //false 
+Boolean(""); //false 
+ 
+//Ejemplos en los que Boolean devuelve verdadero: 
+Boolean(1); //true para 1 o cualquier número diferente de cero (0) 
+Boolean("a"); //true para cualquier caracter o espacio en blanco en el string 
+Boolean([]); //true aunque el array esté vacío 
+Boolean({}); //true aunque el objeto esté vacío 
+Boolean(function(){}); //Cualquier función es verdadera también 
+Boolean(-1); // true 
+
+ 
+```
+---------------------------
+##  Asignación, Comparación y Aritméticos. 
+Operador de asignación:
+```javascript
+__________________________
+= | operador de asignacion 
+__________________________
+
+```
+Operador de comparación:
+```javascript
+__________________________
+== | Igual que
+__________________________
+=== | Estrictamente igual que contenido y tipo de datos
+__________________________
+> or >= or >== | Mayor o mayor igual que
+__________________________
+< or <= or <== | Menor o menor igual que
+__________________________
+!= or !== | Diferente que
+__________________________
+```
+
+Operador aritmetico:
+```javascript
+__________________________
++ | Operador de suma, tambien se utiliza para concatenar dos cadenas de texto
+__________________________
+- | Operador de resta
+__________________________
+* | Operador de multiplicación
+__________________________
+/ | Operador de división
+__________________________
+% | Operador de Modulo
+__________________________
+** | Operador de potenciación
+__________________________
+```
+
+Operadores Logicos:
+```javascript
+__________________________
+! | Not (niega un valor)
+__________________________
+&& | AND
+__________________________
+|| | OR
+__________________________
+```
+
 
 ---------------------------------
 ### Carga de vectores
@@ -174,38 +313,6 @@ while(contador<=10) {
 console.log(contador);
 contador++;
 }
-```
-
-## Funciones
-Existen dos tipos de funciones:
-1)declarativas
-2) de expresión
-
-funciones declarativas:
-```javascript
-function sumar(valor1, valor2) { 
-return valor1 + valor2;
-}
-```
-y llamamos la funcion asi:
-```javascript
-var total = sumar(10,20); 
-console.log(total);
-```
-diferencias de llamar a una funcion con () y sin ()
-```javascript
-      function unaFuncion(){
-      console.log("Esto es una funcion");
-      return 10;
-      }
-
-      console.log("LLamamos a la funcion SIN () y nos dá como resultado: " + unaFuncion);
-     console.log("LLamamos a la funcion con () y nos dá como resultado: " + unaFuncion());
-    console.log("Vemos como al mandar funciones en javascript con () nos devuelve el return")
-```
-Un ejemplo de una función de expresión sería: 
-```javascript
-var suma = function(a,b){return a+b;} 
 ```
 
 ------------------------------
