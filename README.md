@@ -1179,3 +1179,16 @@ widow.localation
             window.location.href = "http://example.com"
         </script>
 ```
+
+------------------------
+Numeros aleatorios 
+---------------------
+
+```javascript
+	functionaleatorio(min, max)
+{
+  returnMath.floor(Math.random()*(max- min+ 1)) + min;
+}
+
+```
+
