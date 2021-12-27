@@ -1192,3 +1192,24 @@ Numeros aleatorios
 
 ```
 
+----------------------
+arrow functions
+----------------------
+
+var hello = 'Hola Gente'
+let world = 'Hola mundo'
+const holamundillo = 'hola mundillo'
+
+
+```javascript
+const funcionArrow = () => {
+    console.log(hello);
+    console.log(world);
+    console.log (holamundillo);
+}
+
+funcionArrow();
+
+```
+
+
